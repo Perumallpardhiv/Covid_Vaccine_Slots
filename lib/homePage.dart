@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:covid_vaccine_slots/slots.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -14,27 +13,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController dayController = TextEditingController();
   TextEditingController pincodeController = TextEditingController();
-  String dropdownValue = '01';
   List slots = [];
-  List<String> list = [
-    '01',
-    '02',
-    '03',
-    '04',
-    '05',
-    '06',
-    '07',
-    '08',
-    '09',
-    '10',
-    '11',
-    '12'
-  ];
+  String dropdownValue = '01';
+  List<String> list = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
   fetchSlots() async {
     await http
         .get(Uri.parse(
-            'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincodeController.text}&date=${dayController.text}-$dropdownValue-2023'))
+            'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincodeController.text.trim()}&date=${dayController.text.trim()}-$dropdownValue-2023'))
         .then((value) {
       Map res = jsonDecode(value.body);
       setState(() {
