@@ -1,4 +1,4 @@
-# covid_vaccine_slots
+# Covid_vaccine_slots
 
 A new Flutter project.
 
