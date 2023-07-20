@@ -14,19 +14,19 @@ class _SlotsState extends State<Slots> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text("Available Slots"),
+        title: const Text("Available Slots"),
       ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: widget.slots.isEmpty
-              ? Text("No Vaccines Available")
+              ? const Text("No Vaccines Available")
               : ListView.builder(
                   itemCount: widget.slots.length,
                   itemBuilder: (context, index) {
                     return Container(
-                      padding: EdgeInsets.all(20),
-                      margin: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(20),
+                      margin: const EdgeInsets.all(5),
                       height: 200,
                       color: Colors.grey.withOpacity(0.3),
                       child: SingleChildScrollView(
@@ -35,33 +35,33 @@ class _SlotsState extends State<Slots> {
                           children: [
                             Text(
                               'Center ID - ${widget.slots[index]['center_id'].toString()}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                               ),
                             ),
                             Text(
                               'Center Name - ${widget.slots[index]['name'].toString()}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                               ),
                             ),
                             Text(
                               'Center Address - ${widget.slots[index]['address'].toString()}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                               ),
                             ),
-                            Divider(),
+                            const Divider(),
                             Text(
                               'Vaccine Name - ${widget.slots[index]['vaccine'].toString()}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                               ),
                             ),
-                            Divider(),
+                            const Divider(),
                             Text(
                               'Slots Timing - ${widget.slots[index]['slots'].toString()}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                               ),
                             ),

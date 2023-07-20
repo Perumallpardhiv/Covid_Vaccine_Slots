@@ -40,12 +40,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text("Vaccination Slots"),
+        title: const Text("Vaccination Slots"),
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,27 +57,27 @@ class _HomePageState extends State<HomePage> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 TextField(
                   controller: pincodeController,
                   keyboardType: TextInputType.number,
                   maxLength: 6,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Enter PIN Code',
                     labelText: 'Enter PIN Code',
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Row(
                   children: [
                     Expanded(
                       child: TextField(
                         controller: dayController,
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(hintText: "Enter Date"),
+                        decoration: const InputDecoration(hintText: "Enter Date"),
                       ),
                     ),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Expanded(
                       child: Container(
                         height: 60,
@@ -105,9 +105,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
                     width: size.width,
                     height: 45,
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         fetchSlots();
                       },
-                      child: Text(
+                      child: const Text(
                         "Find Slots",
                         style: TextStyle(letterSpacing: 2),
                       ),
